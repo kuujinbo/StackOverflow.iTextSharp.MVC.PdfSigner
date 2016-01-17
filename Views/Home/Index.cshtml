@@ -1,0 +1,46 @@
+﻿@model string
+@{
+    ViewBag.Title = "CAC Digital Signature Example";
+}
+
+<h2>Sign a Test PDF</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Hidden("rawBase64PdfData", Model)
+    @Html.Hidden("signedValue", "")
+    <div>
+        <button id="signButton" type="submit" class="btn btn-success">
+            <span class="glyphicon glyphicon-pencil"></span> Sign
+        </button>
+        <button id="resetButton" type="submit" class="btn btn-danger">
+            <span class="glyphicon glyphicon-refresh"></span> Reload page
+        </button>
+    </div>
+    
+    <p>A new test PDF document must be generated after each signature, so you <strong>must</strong> reload this page after each PDF download.</p>
+}
+
+
+@section scripts
+{
+    <script src='~/Scripts/CACSignature.js'></script>
+
+    <script type="text/javascript">
+        var rawBase64PdfData = document.getElementById('rawBase64PdfData').value;
+        var signButton = document.getElementById('signButton');
+        
+        signButton.addEventListener('click', signPdf, false);
+        document.getElementById('resetButton')
+            .addEventListener('click', reloadPage, false);
+
+        function signPdf(e) {
+            signButton.disabled = true;
+            document.getElementById('signedValue').value = pdfSigner.signText(rawBase64PdfData);
+        }
+        function reloadPage(e) {
+            signButton.disabled = false;
+            document.location.reload(true);
+        }
+    </script>
+}
