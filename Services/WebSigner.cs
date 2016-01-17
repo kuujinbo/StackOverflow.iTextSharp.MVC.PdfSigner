@@ -227,7 +227,7 @@ namespace kuujinbo.StackOverflow.iTextSharp.MVC.PdfSigner.Services
                         }
                         else
                         {
-                            Reason += " ";
+                            Reason += "\0";
                         }
                         DataSize = sapStream.Length;
                     }
