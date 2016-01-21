@@ -135,6 +135,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="README.txt" />
     <Content Include="Scripts\libs\bootstrap.js" />
     <Content Include="Scripts\libs\bootstrap.min.js" />
     <Content Include="Scripts\CACSignature.js" />
@@ -146,6 +147,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="README.md" />
     <None Include="Scripts\libs\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\libs\jquery-2.2.0.js" />
     <Content Include="Scripts\libs\jquery-2.2.0.min.js" />
