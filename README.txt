@@ -1,4 +1,4 @@
-﻿ # Web context client-side digital signing. 
+﻿ Web context client-side digital signing. 
  
  Implementation specific, and *REQUIRES** the following:
       -- Internet Explorer web browser (tested IE >= version 10)
