@@ -9,9 +9,12 @@
  Background reference here:
  http://stackoverflow.com/questions/28949243
 ===========================================================================
-To enable client certificates in IIS Express, open:
+To enable client certificates in IIS Express for Visual Studio 2012/2013 open:
 
 %USERPROFILE%\Documents\IISExpress\config\applicationhost.config
+
+Visual Studio 2015 made breaking changes to the project config file, now in the project subdirectory:
+./.vs/config/applicationhost.config
 
 Comment-out default settings and make following changes:
 
