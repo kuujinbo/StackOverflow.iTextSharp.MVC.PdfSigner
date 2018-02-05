@@ -1,10 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Web.Mvc;
-using kuujinbo.StackOverflow.iTextSharp.MVC.PdfSigner.Services;
-using iTextSharp.text;
+﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using kuujinbo.StackOverflow.iTextSharp.MVC.PdfSigner.Services;
+using System;
+using System.IO;
+using System.Web.Mvc;
 
 namespace kuujinbo.StackOverflow.iTextSharp.MVC.PdfSigner.Controllers
 {
@@ -15,6 +14,7 @@ namespace kuujinbo.StackOverflow.iTextSharp.MVC.PdfSigner.Controllers
         {
             WebSigner ws = new WebSigner();
             ws.SetSignatureBox(50, 670, 280, 760);
+
             return View(model:GetPreSignedTestReader());
         }
 
@@ -48,7 +48,5 @@ namespace kuujinbo.StackOverflow.iTextSharp.MVC.PdfSigner.Controllers
                 return ws.PreSign(ms.ToArray());
             }
         }
-
-
     }
 }

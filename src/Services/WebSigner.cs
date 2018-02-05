@@ -227,12 +227,13 @@ namespace kuujinbo.StackOverflow.iTextSharp.MVC.PdfSigner.Services
                         }
                         else
                         {
-                            Reason += "\0";
+                            // Reason += '\0';
+                            Reason += " ";
                         }
                         DataSize = sapStream.Length;
                     }
                     // sanity check
-                    if (DataReadCount > 2) throw new InvalidOperationException("DataReadCount");
+                    if (DataReadCount > 200) throw new InvalidOperationException("DataReadCount");
                 } while (isOdd);
             }
             catch { throw; }
